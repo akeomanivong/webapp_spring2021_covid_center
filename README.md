@@ -9,7 +9,7 @@ Code:
 GitHub Page:
 ![Part 1 Page](Part1_Page.PNG)
 
-Click [here](https://akeomanivong.github.io/webapp_spring2021_test/ "GitHubPage") for the GitHub page
+Click [here](https://akeomanivong.github.io/webapp_spring2021_covid_center/ "GitHubPage") for the GitHub page
 
 **Part 2**
 
