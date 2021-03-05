@@ -36,6 +36,34 @@ function validateForm(){
         }
     }
 
+    var ddCountry = document.querySelector("#ddCountry");
+    var divCountryError = document.querySelector("#divCountryError");
+    if(ddCountry.value == "Yes"){
+        var txtCountry = document.querySelector("#txtCountry");
+        if(txtCountry.value == ""){
+            document.querySelector("#divCountryError").classList.remove("invisible");
+            divCountryError.innerHTML = "Please enter which countries";
+            txtCountry.classList.add("hasError");
+            formIsValid = false;
+        }
+        else{
+            document.querySelector("#divCountryError").classList.add("invisible");
+            divCountryError.innerHTML = "";
+            txtCountry.classList.remove("hasError");
+        }
+    }
+
+    var elements = document.getElementsByTagName("input")
+    var invalidChars = ['&', '<', '>','#', '\'', '\"', '!', '~'];
+    for(let i = 0; i < elements.length; i++){
+        for(let j = 0; j < invalidChars.length; j++) {
+            if (elements[i].value.indexOf(invalidChars[j]) != -1) {
+                elements[i].classList.add("hasError");
+                formIsValid = false;
+            }
+        }
+    }
+
 
     return formIsValid;
 }
